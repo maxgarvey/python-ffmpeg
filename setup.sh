@@ -1,12 +1,15 @@
 #!/bin/bash
 
 # need to update repoes
-sudo yum update -y
+sudo apt-get update -y
 # and install upgrades
-sudo yum upgrade
+sudo apt-get upgrade -y
 
 # then get python stuff and vim
-sudo yum install vim python python-pip python-virtualenv epel-release wget git gcc yasm -y
+sudo apt-get install vim python python-pip python-virtualenv wget git gcc yasm dkms -y
+
+# get developer tools
+# sudo yum groupinstall "Development Tools" -y
 
 # if ffmpeg command found, then just print 'already installed'
 if which ffmpeg; then
@@ -14,12 +17,12 @@ if which ffmpeg; then
 else
   printf 'installing ffmpeg (this may take some time...)\n'
   # get ffmpeg sources from the web
-  wget https://ffmpeg.org/releases/ffmpeg-snapshot-git.tar.bz2
+  cd ~ && wget https://ffmpeg.org/releases/ffmpeg-snapshot-git.tar.bz2
 
   # untar sources
-  tar -xvjf ffmpeg-snapshot-git.tar.bz2
-  rm ffmpeg-snapshot-git.tar.bz2
+  cd ~ && tar -xvjf ffmpeg-snapshot-git.tar.bz2
+  cd ~ && rm ffmpeg-snapshot-git.tar.bz2
 
-  sudo ffmpeg/configure
-  sudo cd ffmpeg && make install
+  cd ~/ffmpeg && sudo configure
+  cd ~/ffmpeg && sudo make install
 fi
