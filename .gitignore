@@ -1,4 +1,9 @@
 # python
 *.pyc
 env
+
+# vagrant
 .vagrant
+
+# ffmpeg
+ffmpeg
