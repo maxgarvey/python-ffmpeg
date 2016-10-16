@@ -26,3 +26,12 @@ else
   cd ~/ffmpeg && sudo configure
   cd ~/ffmpeg && sudo make install
 fi
+
+# virtualenv stuff
+if [ ! -d /vagrant/ubuntu_env  ]; then
+  # create new virtualenv
+  virtualenv /vagrant/ubuntu_env
+  # install pip requirements to virtualenv
+  /vagrant/ubuntu_env/bin/pip install -r /vagrant/pip-requirements.txt
+fi
+

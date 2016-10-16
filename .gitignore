@@ -1,6 +1,6 @@
 # python
 *.pyc
-env
+*env
 
 # vagrant
 .vagrant
