@@ -8,9 +8,9 @@ To set up the development environment, use Vagrant:
 [https://www.vagrantup.com/](https://www.vagrantup.com/)
 
 in the current directory, enter:  
-```vagrant up```  
+`vagrant up`  
 the first time, this will install the prerequisites, including the base box for the VM:  
-```ubuntu/trusty64```  
+`ubuntu/trusty64`  
 as well as ffmpeg from source. This behavior is all governed by the "setup.sh" script in the base directory of the repository.
 
 ### Basic Development
