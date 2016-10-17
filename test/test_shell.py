@@ -1,4 +1,4 @@
-from source.shell import run, join_command
+from shell import run, join_command
 
 def test_run_method():
     return_value, output = run('echo "Hello"')
