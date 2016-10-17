@@ -14,3 +14,5 @@ def run(command):
 
     return return_value, process_output
 
+def join_command(command_elements):
+    return ' '.join(command_elements)
