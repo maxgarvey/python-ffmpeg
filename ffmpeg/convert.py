@@ -233,6 +233,10 @@ supported_audio_output_formats = [
    'wmav1',
    'wmav2',
 ]
+
+class ConvertAudioException(Exception):
+	pass
+
 def verify_audio_output_format(output_format):
     if output_format.lower() in supported_audio_output_formats:
         return True
