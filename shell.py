@@ -2,6 +2,7 @@ import subprocess
 
 def run(command):
     # execute command
+    print('run: {command}'.format(command=command))
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT)
     # collect output
