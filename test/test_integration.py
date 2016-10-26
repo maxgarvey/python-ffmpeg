@@ -1,5 +1,5 @@
 from lib import convert_audio
-from utils import compare_files
+from utils import compare_files, clean_output
 
 def test_convert_audio_success():
 	convert_audio(
@@ -11,3 +11,5 @@ def test_convert_audio_success():
 		'test/integration/expected/basic_loop.wav',
 	)
 	assert same_file
+        clean_output()
+
