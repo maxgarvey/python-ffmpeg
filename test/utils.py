@@ -20,3 +20,7 @@ def clean_output():
                     output_dir, file_name
                 )
             )
+
+def file_exists(path):
+    # returns true if path exists
+    return os.path.isfile(path)

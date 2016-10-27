@@ -246,7 +246,7 @@ def convert_audio_command(ffmpeg_binary, input_filename, output_format,
 	              output_filename):
 
    convert_audio_template = ('{ffmpeg_binary} -i {input_filename} '
-                             '-f {output_format} {output_filename}')
+                             '-f {output_format} {output_filename} -y')
 
    convert_audio_command = convert_audio_template.format(
        ffmpeg_binary=ffmpeg_binary, input_filename=input_filename,

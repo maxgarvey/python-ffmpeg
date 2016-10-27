@@ -21,5 +21,6 @@ def test_verify_audio_output_format_bad():
 def test_convert_audio_command():
 	command = convert_audio_command(
 		'ffmpeg', 'soundfile.wav', 'mp3', 'soundfile.mp3')
-	assert command == 'ffmpeg -i soundfile.wav -f mp3 soundfile.mp3'
+        print command
+	assert command == 'ffmpeg -i soundfile.wav -f mp3 soundfile.mp3 -y'
 
